@@ -1,0 +1,17 @@
+{
+	"Name" : "Testing World",
+	"Age" : 23,
+	"PhoneNumber" : "8743-913-121",
+	"City" : ["Delhi", "Mumbai", "Banglore"],
+	"Address" : 
+	{
+		"StreetName" : "ABCD",
+		"HouseNumber" : "23D",
+		"City" : "ABCDEF",
+		"Number" : 
+		{
+			"Landline" : "213324324",
+			"Mobile" : "42342324"
+		}
+	}
+}
