@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-26T21:10:57.629149" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 006 E2E" source="C:\information\TestingWorld\RobotAPIAutomation\TC_006_E2E.robot">
+<test id="s1-t1" name="E2E Robot API Automation" line="13">
+<kw name="TC_001 Add new Data | POST On Session">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-01-26T21:10:57.793863" level="INFO">Creating Session using : alias=AddData, url=https://thetestingworldapi.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>AddData</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-01-26T21:10:57.792866" elapsed="0.000997"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-01-26T21:10:57.793863" level="INFO">&amp;{body} = { first_name=Hello | middle_name=A | last_name=World | date_of_birth=12/12/1990 }</msg>
+<var>&amp;{body}</var>
+<arg>first_name=${original_first_name}</arg>
+<arg>middle_name=A</arg>
+<arg>last_name=World</arg>
+<arg>date_of_birth=12/12/1990</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-01-26T21:10:57.793863" elapsed="0.000000"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2024-01-26T21:10:58.430537" level="INFO">POST Request : url=https://thetestingworldapi.com/api/studentsDetails 
+ path_url=/api/studentsDetails 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=first_name=Hello&amp;middle_name=A&amp;last_name=World&amp;date_of_birth=12%2F12%2F1990 
+ </msg>
+<msg time="2024-01-26T21:10:58.430537" level="INFO">POST Response : url=https://thetestingworldapi.com/api/studentsDetails 
+ status=201, reason=Created 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Location': 'https://thetestingworldapi.com/api/studentsDetails/10061420', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Fri, 26 Jan 2024 14:10:57 GMT', 'Content-Length': '103'} 
+ body={"id":10061420,"first_name":"Hello","middle_name":"A","last_name":"World","date_of_birth":"12/12/1990"} 
+ </msg>
+<msg time="2024-01-26T21:10:58.430537" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>api/studentsDetails</arg>
+<arg>data=${body}</arg>
+<arg>verify=${True}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-01-26T21:10:57.793863" elapsed="0.636674"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-01-26T21:10:58.431537" level="INFO">${actual_code} = 201</msg>
+<var>${actual_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-01-26T21:10:58.430537" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_code}</arg>
+<arg>201</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-26T21:10:58.431537" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-01-26T21:10:58.432534" level="INFO">${json_res} = {'id': 10061420, 'first_name': 'Hello', 'middle_name': 'A', 'last_name': 'World', 'date_of_birth': '12/12/1990'}</msg>
+<var>${json_res}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-01-26T21:10:58.431537" elapsed="0.000997"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2024-01-26T21:10:58.447494" level="INFO">@{id_list} = [ 10061420 ]</msg>
+<var>@{id_list}</var>
+<arg>${json_res}</arg>
+<arg>id</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2024-01-26T21:10:58.432534" elapsed="0.014960"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${id_list}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-01-26T21:10:58.447494" elapsed="0.000000"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2024-01-26T21:10:58.448492" level="INFO">${id} = 10061420</msg>
+<var>${id}</var>
+<arg>${id_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2024-01-26T21:10:58.448492" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-01-26T21:10:58.448492" level="INFO">${global_variable_id} = 10061420</msg>
+<arg>${global_variable_id}</arg>
+<arg>${id}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-01-26T21:10:58.448492" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-26T21:10:57.792866" elapsed="0.655626"/>
+</kw>
+<kw name="TC_002 Update Data | PUT On Session">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-01-26T21:10:58.449319" level="INFO">Creating Session using : alias=UpdateData, url=https://thetestingworldapi.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>UpdateData</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-01-26T21:10:58.449319" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-01-26T21:10:58.449319" level="INFO">&amp;{body} = { id=10061420 | first_name=Testing | middle_name=A | last_name=World | date_of_birth=12/12/1990 }</msg>
+<var>&amp;{body}</var>
+<arg>id=${global_variable_id}</arg>
+<arg>first_name=${update_first_name}</arg>
+<arg>middle_name=A</arg>
+<arg>last_name=World</arg>
+<arg>date_of_birth=12/12/1990</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-01-26T21:10:58.449319" elapsed="0.000000"/>
+</kw>
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2024-01-26T21:10:59.009215" level="INFO">PUT Request : url=https://thetestingworldapi.com/api/studentsDetails/10061420 
+ path_url=/api/studentsDetails/10061420 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '89', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=id=10061420&amp;first_name=Testing&amp;middle_name=A&amp;last_name=World&amp;date_of_birth=12%2F12%2F1990 
+ </msg>
+<msg time="2024-01-26T21:10:59.009215" level="INFO">PUT Response : url=https://thetestingworldapi.com/api/studentsDetails/10061420 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Fri, 26 Jan 2024 14:10:58 GMT', 'Content-Length': '46'} 
+ body={"status":"true","msg":"update  data success"} 
+ </msg>
+<msg time="2024-01-26T21:10:59.009215" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>UpdateData</arg>
+<arg>api/studentsDetails/${global_variable_id}</arg>
+<arg>data=${body}</arg>
+<arg>verify=${True}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-01-26T21:10:58.450318" elapsed="0.558897"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-01-26T21:10:59.010217" level="INFO">${actual_code} = 200</msg>
+<var>${actual_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.009215" elapsed="0.001002"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.010217" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-01-26T21:10:59.084512" level="INFO">GET Request : url=https://thetestingworldapi.com/api/studentsDetails/10061420 
+ path_url=/api/studentsDetails/10061420 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-01-26T21:10:59.084512" level="INFO">GET Response : url=https://thetestingworldapi.com/api/studentsDetails/10061420 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Fri, 26 Jan 2024 14:10:58 GMT', 'Content-Length': '130'} 
+ body={"status":"true","data":{"id":10061420,"first_name":"Testing","middle_name":"A","last_name":"World","date_of_birth":"12/12/1990"}} 
+ </msg>
+<msg time="2024-01-26T21:10:59.084512" level="INFO">${recheck_response} = &lt;Response [200]&gt;</msg>
+<var>${recheck_response}</var>
+<arg>UpdateData</arg>
+<arg>api/studentsDetails/${global_variable_id}</arg>
+<arg>verify=${True}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.010217" elapsed="0.074295"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${recheck_response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.085507" elapsed="0.000545"/>
+</kw>
+<status status="PASS" start="2024-01-26T21:10:58.449319" elapsed="0.636733"/>
+</kw>
+<kw name="TC_003 Fetch Student Details by id | Validate content using JSON Path">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-01-26T21:10:59.086052" level="INFO">Creating Session using : alias=FetchData, url=https://thetestingworldapi.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>FetchData</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-01-26T21:10:59.086052" elapsed="0.001001"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-01-26T21:10:59.655312" level="INFO">GET Request : url=https://thetestingworldapi.com/api/studentsDetails/10061420 
+ path_url=/api/studentsDetails/10061420 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-01-26T21:10:59.655312" level="INFO">GET Response : url=https://thetestingworldapi.com/api/studentsDetails/10061420 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Fri, 26 Jan 2024 14:10:59 GMT', 'Content-Length': '130'} 
+ body={"status":"true","data":{"id":10061420,"first_name":"Testing","middle_name":"A","last_name":"World","date_of_birth":"12/12/1990"}} 
+ </msg>
+<msg time="2024-01-26T21:10:59.655312" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>FetchData</arg>
+<arg>api/studentsDetails/${global_variable_id}</arg>
+<arg>verify=${True}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.087053" elapsed="0.568259"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-01-26T21:10:59.657308" level="INFO">${actual_code} = 200</msg>
+<var>${actual_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.656311" elapsed="0.000997"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.657308" elapsed="0.000989"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-01-26T21:10:59.658297" level="INFO">${json_res} = {'status': 'true', 'data': {'id': 10061420, 'first_name': 'Testing', 'middle_name': 'A', 'last_name': 'World', 'date_of_birth': '12/12/1990'}}</msg>
+<var>${json_res}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.658297" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2024-01-26T21:10:59.672258" level="INFO">@{first_name_list} = [ Testing ]</msg>
+<var>@{first_name_list}</var>
+<arg>${json_res}</arg>
+<arg>data.first_name</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2024-01-26T21:10:59.658297" elapsed="0.013961"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2024-01-26T21:10:59.673256" level="INFO">${first_name} = Testing</msg>
+<var>${first_name}</var>
+<arg>${first_name_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.673256" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${first_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.673256" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${first_name}</arg>
+<arg>Testing</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.673256" elapsed="0.000999"/>
+</kw>
+<status status="PASS" start="2024-01-26T21:10:59.086052" elapsed="0.588203"/>
+</kw>
+<kw name="TC_004 Delete Data | Validate Delete Request">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-01-26T21:10:59.674255" level="INFO">Creating Session using : alias=AppAccess, url=https://thetestingworldapi.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>AppAccess</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-01-26T21:10:59.674255" elapsed="0.000000"/>
+</kw>
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2024-01-26T21:11:00.256990" level="INFO">DELETE Request : url=https://thetestingworldapi.com/api/studentsDetails/10061420 
+ path_url=/api/studentsDetails/10061420 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2024-01-26T21:11:00.256990" level="INFO">DELETE Response : url=https://thetestingworldapi.com/api/studentsDetails/10061420 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Fri, 26 Jan 2024 14:10:59 GMT', 'Content-Length': '46'} 
+ body={"status":"true","msg":"Delete  data success"} 
+ </msg>
+<msg time="2024-01-26T21:11:00.257982" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>AppAccess</arg>
+<arg>api/studentsDetails/${global_variable_id}</arg>
+<arg>verify=${True}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-01-26T21:10:59.675252" elapsed="0.582730"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-01-26T21:11:00.259981" level="INFO">${actual_code} = 200</msg>
+<var>${actual_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-01-26T21:11:00.258986" elapsed="0.000995"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-26T21:11:00.260974" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-01-26T21:11:00.261966" level="INFO">${json_res} = {'status': 'true', 'msg': 'Delete  data success'}</msg>
+<var>${json_res}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-01-26T21:11:00.260974" elapsed="0.000992"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${json_res}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-01-26T21:11:00.261966" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2024-01-26T21:11:00.275928" level="INFO">@{status_list} = [ true ]</msg>
+<var>@{status_list}</var>
+<arg>${json_res}</arg>
+<arg>status</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2024-01-26T21:11:00.261966" elapsed="0.013962"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2024-01-26T21:11:00.275928" level="INFO">${status} = true</msg>
+<var>${status}</var>
+<arg>${status_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2024-01-26T21:11:00.275928" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status}</arg>
+<arg>true</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-26T21:11:00.276926" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-26T21:10:59.674255" elapsed="0.602671"/>
+</kw>
+<status status="PASS" start="2024-01-26T21:10:57.792866" elapsed="2.484060"/>
+</test>
+<status status="PASS" start="2024-01-26T21:10:57.630147" elapsed="2.647777"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC 006 E2E">TC 006 E2E</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

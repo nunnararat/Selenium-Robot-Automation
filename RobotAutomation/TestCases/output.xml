@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-25T19:33:11.263816" rpa="false" schemaversion="5">
+<suite id="s1" name="RegistrationTC" source="C:\information\TestingWorld\RobotAutomation\TestCases\RegistrationTC">
+<suite id="s1-s1" name="TC 003 Start Close Browser" source="C:\information\TestingWorld\RobotAutomation\TestCases\RegistrationTC\TC_003_Start_Close_Browser.robot">
+<test id="s1-s1-t1" name="Robot Third Test Case" line="17">
+<kw name="Start Browser and Maximize 1" owner="Resources1" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:11.495618" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-25T19:33:11.495618" elapsed="3.971096"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-25T19:33:15.468705" elapsed="0.118399"/>
+</kw>
+<doc>User defined Keyword without Argument</doc>
+<status status="PASS" start="2024-01-25T19:33:11.494620" elapsed="4.093481"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:15.589101" level="INFO">Typing text 'Hello World' into text field 'name:fld_username'.</msg>
+<arg>name:fld_username</arg>
+<arg>Hello World</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:15.588101" elapsed="0.098565"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:15.688083" level="INFO">Typing text 'testingworldindia@gmail.com' into text field 'name:fld_email'.</msg>
+<arg>name:fld_email</arg>
+<arg>testingworldindia@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:15.686666" elapsed="0.065163"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:15.772773" level="INFO">Typing text '123456' into text field 'name:fld_password'.</msg>
+<arg>name:fld_password</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:15.772773" elapsed="0.051459"/>
+</kw>
+<kw name="Close Browser Window" owner="Resources1" type="TEARDOWN">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:15.827607" level="INFO">${Title} = Login &amp; Sign Up Forms</msg>
+<var>${Title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-01-25T19:33:15.825231" elapsed="0.002376"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:15.828602" level="INFO">Login &amp; Sign Up Forms</msg>
+<arg>${Title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:15.828602" elapsed="0.000999"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-25T19:33:15.829601" elapsed="2.132420"/>
+</kw>
+<status status="PASS" start="2024-01-25T19:33:15.825231" elapsed="2.136790"/>
+</kw>
+<tag>Sanity</tag>
+<status status="PASS" start="2024-01-25T19:33:11.494620" elapsed="6.467401"/>
+</test>
+<test id="s1-s1-t2" name="Robot Third Next Test Case" line="23">
+<kw name="Start Browser and Maximize 1" owner="Resources1" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:17.966009" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-25T19:33:17.965012" elapsed="3.983293"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-25T19:33:21.949300" elapsed="0.120614"/>
+</kw>
+<doc>User defined Keyword without Argument</doc>
+<status status="PASS" start="2024-01-25T19:33:17.965012" elapsed="4.104902"/>
+</kw>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:22.069914" level="INFO">Selecting 'office' from radio button 'add_type'.</msg>
+<arg>add_type</arg>
+<arg>office</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-01-25T19:33:22.069914" elapsed="0.053980"/>
+</kw>
+<kw name="Close Browser Window" owner="Resources1" type="TEARDOWN">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:22.129878" level="INFO">${Title} = Login &amp; Sign Up Forms</msg>
+<var>${Title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-01-25T19:33:22.125890" elapsed="0.003988"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:22.130875" level="INFO">Login &amp; Sign Up Forms</msg>
+<arg>${Title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:22.130875" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-25T19:33:22.132878" elapsed="2.107114"/>
+</kw>
+<status status="PASS" start="2024-01-25T19:33:22.125890" elapsed="2.115090"/>
+</kw>
+<tag>Regression</tag>
+<status status="PASS" start="2024-01-25T19:33:17.965012" elapsed="6.276962"/>
+</test>
+<doc>This File having testcase of testing ABC Functionality</doc>
+<status status="PASS" start="2024-01-25T19:33:11.334617" elapsed="12.918332"/>
+</suite>
+<suite id="s1-s2" name="TC 004 FetchData" source="C:\information\TestingWorld\RobotAutomation\TestCases\RegistrationTC\TC_004_FetchData.robot">
+<test id="s1-s2-t1" name="Robot Fetch Data" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:24.260920" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<arg>${url_testing}</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-25T19:33:24.260920" elapsed="4.267009"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-25T19:33:28.528927" elapsed="0.109977"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:28.642894" level="INFO">${PageTitle} = Login &amp; Sign Up Forms</msg>
+<var>${PageTitle}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-01-25T19:33:28.638904" elapsed="0.003990"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:28.644888" level="INFO">Login &amp; Sign Up Forms</msg>
+<arg>${PageTitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:28.643891" elapsed="0.000997"/>
+</kw>
+<kw name="Get Selenium Speed" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:28.645885" level="INFO">${Speed} = 0 seconds</msg>
+<var>${Speed}</var>
+<doc>Gets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-01-25T19:33:28.644888" elapsed="0.000997"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:28.646881" level="INFO">0 seconds</msg>
+<arg>${Speed}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:28.645885" elapsed="0.000996"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:28.670334" level="INFO">${Value} = Sign up</msg>
+<var>${Value}</var>
+<arg>//input[@type='submit']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:28.646881" elapsed="0.023453"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:28.671332" level="INFO">Sign up</msg>
+<arg>${Value}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:28.671332" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:28.693726" level="INFO">${Text} = Read Detail</msg>
+<var>${Text}</var>
+<arg>//a[@class='displayPopup']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:28.672329" elapsed="0.021397"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:28.694723" level="INFO">Read Detail</msg>
+<arg>${Text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:28.694723" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-25T19:33:28.695722" elapsed="2.138936"/>
+</kw>
+<status status="PASS" start="2024-01-25T19:33:24.260920" elapsed="6.573738"/>
+</test>
+<test id="s1-s2-t2" name="Robot Fetch Data 2" line="30">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:30.838586" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<arg>${url_testing}</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-25T19:33:30.837515" elapsed="4.127323"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-25T19:33:34.964838" elapsed="0.119320"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:35.084158" level="INFO">Selecting options from selection list 'name:sex' by index 1.</msg>
+<arg>name:sex</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-01-25T19:33:35.084158" elapsed="0.090772"/>
+</kw>
+<kw name="Get Selected List Value" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:35.207814" level="INFO">${Val} = 1</msg>
+<var>${Val}</var>
+<arg>name:sex</arg>
+<doc>Returns the value of selected option from selection list ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:35.175930" elapsed="0.031884"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:35.208813" level="INFO">1</msg>
+<arg>${Val}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:35.208813" elapsed="0.000000"/>
+</kw>
+<kw name="Get Selected List Label" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:35.241713" level="INFO">${Text} = Male</msg>
+<var>${Text}</var>
+<arg>name:sex</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:35.209810" elapsed="0.031903"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:35.242711" level="INFO">Male</msg>
+<arg>${Text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:35.242711" elapsed="0.000997"/>
+</kw>
+<kw name="Get List Items" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:35.270940" level="INFO">${AllLabels} = ['Choose Gender', 'Male', 'Female']</msg>
+<var>${AllLabels}</var>
+<arg>name:sex</arg>
+<doc>Returns all labels or values of selection list ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:35.243708" elapsed="0.027232"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:35.271938" level="INFO">['Choose Gender', 'Male', 'Female']</msg>
+<arg>${AllLabels}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:35.271938" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-25T19:33:35.272936" elapsed="2.133328"/>
+</kw>
+<status status="PASS" start="2024-01-25T19:33:30.837515" elapsed="6.569747"/>
+</test>
+<test id="s1-s2-t3" name="Robot Fetch Data 3" line="44">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:37.411252" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<arg>${url_testing}</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-25T19:33:37.410254" elapsed="4.330676"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-25T19:33:41.742922" elapsed="0.119613"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:41.863532" level="INFO">Selecting options from selection list 'name:sex' by index 1.</msg>
+<arg>name:sex</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-01-25T19:33:41.862535" elapsed="0.134325"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:42.008221" level="INFO">${ActualURL} = https://www.thetestingworld.com/testings/</msg>
+<var>${ActualURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-01-25T19:33:41.999542" elapsed="0.008679"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:42.010214" level="INFO">https://www.thetestingworld.com/testings/</msg>
+<arg>${ActualURL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:42.010214" elapsed="0.000000"/>
+</kw>
+<kw name="Get Source" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:42.018013" level="INFO">${PageHTML} = &lt;html lang="en" class="no-js"&gt;&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt; 
+    &lt;meta name="viewport" content="width=device-width, initial-scale...</msg>
+<var>${PageHTML}</var>
+<doc>Returns the entire HTML source of the current page or frame.</doc>
+<status status="PASS" start="2024-01-25T19:33:42.012209" elapsed="0.005804"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:42.021001" level="INFO">&lt;html lang="en" class="no-js"&gt;&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt; 
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; 
+    &lt;title&gt; Login &amp;amp; Sign Up Forms&lt;/title&gt;
+    &lt;meta name="author" content="Reverie Tech"&gt;
+    &lt;link rel="stylesheet" type="text/css" href="css/demo.css"&gt;
+    &lt;link rel="stylesheet" type="text/css" href="tabs.css"&gt;
+    &lt;link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;style&gt;
+#overlay {
+ display:none; /*hidden on pageload*/
+ position:fixed; /*this will disable it from scrolling*/
+ width:100%; /*this will give the full width*/
+ height:100%; /*this will give the full height*/
+ z-index:999; /*this will keep it above all elements in the page*/
+ left:0; /*this will align it to the left*/
+ top:0; /*this will align it to the top*/
+ background:#000; /*this will give it a black background*/
+}
+
+.popup {
+ display:none; /*hidden on pageload*/
+ width:50%; /*width of popup*/
+ height:400px;  /*height of popup*/
+ padding:10px; /*padding for popup*/
+ background:#fff; /*background of popup*/
+ border:5px solid #ccc; /*border of popup*/
+ position:fixed; /*this will keep it relative to the body*/
+ z-index:9999; /*this will keep it above the overlay*/
+ top:10%; /*keep popup in center*/
+ left:25%; /*keep popup in center*/
+ color:#000000;
+
+}
+.popup .close { /* close link*/
+ float:right;
+ color:#000;
+ text-decoration:none;/*remove underline from the close link*/
+}
+.popup p { /*popup text*/
+ padding:10px 0; color:#333333; font-size:18px;
+}
+&lt;/style&gt;
+
+&lt;div id="overlay"&gt;&lt;/div&gt;
+
+&lt;div class="popup" id="popup1"&gt;
+&lt;a href="#" class="close"&gt;X&lt;/a&gt;
+&lt;p&gt;
+&lt;/p&gt;&lt;h2&gt;Terms and Conditions&lt;/h2&gt;&lt;br&gt;
+&lt;br&gt;
+
+It’s up to you to set the rules and guidelines that the user must agree to. You can think of your Terms and Conditions agreement as the legal agreement where you maintain your rights to exclude users from your app in the event that they abuse your app, and where you maintain your legal rights against potential app abusers, and so on.&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+Terms and Conditions are also known as Terms of Service or Terms of Use.&lt;br&gt;
+&lt;br&gt;
+
+This type of legal agreement can be used for both your website and your mobile app. It’s not required (it’s not recommended actually) to have separate Terms and Conditions agreements: one for your website and one for your mobile app.
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+&lt;header&gt;
+	&lt;h1&gt;&lt;img src="images/logo.png" style=" width:400px;"&gt;&lt;span&gt;Login or Sign Up to start&lt;/span&gt; &lt;hr&gt;&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;div class="container"&gt;
+&lt;!--    &lt;div class="democolors"&gt;
+        &lt;a class="blue" href="index.html"&gt;blue&lt;/a&gt;
+        &lt;a class="red" href="red.html"&gt;red&lt;/a&gt;
+        &lt;a class="purple" href="purple.html"&gt;purple&lt;/a&gt;
+    &lt;/div&gt;--&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.left{ float:left; width:30%; text-align:center;}
+.right{ float:right; width:30%; text-align:center;}
+.center{ float:left; width:40%;}
+
+@media only screen and (max-width: 767px) {
+ .left{ float:left; width:100%; text-align:center;}
+.right{ float:right; width:100%; text-align:center;     padding-top: 44px;}
+.center{ float:left; width:100%; text-align:center;}
+
+.left img, .right img{ width:100%;}
+
+}
+
+&lt;/style&gt;
+
+&lt;div class="container" style="width:90%;"&gt;
+	 &lt;div class="left"&gt;
+	      &lt;a href="https://t.me/joinchat/GgRlDbOsbSzkJElL" target="_blank"&gt;
+     &lt;img src="banner/64625f639e847.png"&gt;
+	 
+	      &lt;/a&gt;&lt;a href="https://www.facebook.com/groups/461729974772386/?ref=nf_target&amp;amp;hc_ref=ARSCrv_mrMgSSDWqT4b8kx3RpnWSI6K9uEhVNH-HHMESWvrSmtpqCg2IXKIcVMNXau8&amp;amp;fref=gs&amp;amp;dti=461729974772386&amp;amp;hc_location=group" target="_blank"&gt;
+     &lt;img src="banner/5e13707d13dbc.jpg"&gt;
+	 
+	      &lt;/a&gt;&lt;a href="https://www.youtube.com/channel/UCsdoSHH5bucBf_wwtvWJfnQ/playlists" target="_blank"&gt;
+     &lt;img src="banner/5e13707d13e74.jpg"&gt;
+	 
+	      &lt;/a&gt;&lt;a href="" target="_blank"&gt;
+     &lt;img src="banner/5c33a68c8a087.jpg"&gt;
+	 
+	      &lt;/a&gt;
+     &lt;/div&gt;
+    &lt;section class="tabblue center"&gt;
+		&lt;ul class="tabs blue"&gt;
+          &lt;li&gt;
+            &lt;input type="radio" name="tabs blue" id="tab1" checked=""&gt;
+            &lt;label for="tab1"&gt;Register&lt;/label&gt;
+            &lt;div id="tab-content1" class="tab-content"&gt;
+              &lt;p&gt;Register now and kick start your career as a Software Testing Pro!&lt;/p&gt;
+              
+             
+
+                                       
+                   
+                  
+                    
+                  
+                    
+               &lt;br&gt;
+              &lt;form method="post" name="register" action="#"&gt;
+              &lt;input name="_hiddenTXT" type="hidden" value="1"&gt;
+              
+                &lt;span class="tabaddon"&gt;&lt;i class="fa fa-user fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;input class="field" name="fld_username" required="" type="text" placeholder="myusername" value=""&gt;
+                &lt;span class="tabaddon"&gt;&lt;i class="fa fa-envelope fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;input class="field" name="fld_email" required="" type="email" placeholder="myusername@gmail.com" value=""&gt;
+                &lt;span class="tabaddon"&gt;&lt;i class="fa fa-lock fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;input class="field" name="fld_password" required="" type="password" placeholder="Password" value=""&gt;
+                &lt;span class="tabaddon"&gt;&lt;i class="fa fa-lock fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;input class="field" name="fld_cpassword" required="" type="password" placeholder="Confirm password" value=""&gt;
+                &lt;span class="tabaddon"&gt;&lt;i class="fa fa-calendar-o fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;input type="text" id="datepicker" name="dob" placeholder="Date of birth" value="" class="hasDatepicker"&gt;
+                
+                &lt;span class="tabaddon"&gt;&lt;i class="fa fa-phone fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;input type="text" placeholder="Phone" name="phone" value=""&gt;
+                
+                &lt;span class="tabaddon"&gt;&lt;i class="fa fa-map fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;input type="text" placeholder="Address" name="address" value=""&gt;
+                
+                Address type : &lt;input style="position:inherit;" name="add_type" type="radio" value="home"&gt;Home 
+                &lt;input style="position:inherit;" name="add_type" type="radio" value="office"&gt;Office
+                
+                &lt;select name="sex" required=""&gt;
+                  &lt;option value=""&gt;Choose Gender&lt;/option&gt;
+                  &lt;option value="1"&gt;Male&lt;/option&gt;
+                  &lt;option value="2"&gt;Female&lt;/option&gt;
+                &lt;/select&gt;
+
+                
+&lt;select name="country" class="last countries " id="countryId"&gt;
+    &lt;option value=""&gt;Select Country&lt;/option&gt;
+&lt;option value="1"&gt;Afghanistan&lt;/option&gt;&lt;option value="2"&gt;Albania&lt;/option&gt;&lt;option value="3"&gt;Algeria&lt;/option&gt;&lt;option value="4"&gt;American Samoa&lt;/option&gt;&lt;option value="5"&gt;Andorra&lt;/option&gt;&lt;option value="6"&gt;Angola&lt;/option&gt;&lt;option value="7"&gt;Anguilla&lt;/option&gt;&lt;option value="8"&gt;Antarctica&lt;/option&gt;&lt;option value="9"&gt;Antigua And Barbuda&lt;/option&gt;&lt;option value="10"&gt;Argentina&lt;/option&gt;&lt;option value="11"&gt;Armenia&lt;/option&gt;&lt;option value="12"&gt;Aruba&lt;/option&gt;&lt;option value="13"&gt;Australia&lt;/option&gt;&lt;option value="14"&gt;Austria&lt;/option&gt;&lt;option value="15"&gt;Azerbaijan&lt;/option&gt;&lt;option value="16"&gt;Bahamas The&lt;/option&gt;&lt;option value="17"&gt;Bahrain&lt;/option&gt;&lt;option value="18"&gt;Bangladesh&lt;/option&gt;&lt;option value="19"&gt;Barbados&lt;/option&gt;&lt;option value="20"&gt;Belarus&lt;/option&gt;&lt;option value="21"&gt;Belgium&lt;/option&gt;&lt;option value="22"&gt;Belize&lt;/option&gt;&lt;option value="23"&gt;Benin&lt;/option&gt;&lt;option value="24"&gt;Bermuda&lt;/option&gt;&lt;option value="25"&gt;Bhutan&lt;/option&gt;&lt;option value="26"&gt;Bolivia&lt;/option&gt;&lt;option value="27"&gt;Bosnia and Herzegovina&lt;/option&gt;&lt;option value="28"&gt;Botswana&lt;/option&gt;&lt;option value="29"&gt;Bouvet Island&lt;/option&gt;&lt;option value="30"&gt;Brazil&lt;/option&gt;&lt;option value="31"&gt;British Indian Ocean Territory&lt;/option&gt;&lt;option value="32"&gt;Brunei&lt;/option&gt;&lt;option value="33"&gt;Bulgaria&lt;/option&gt;&lt;option value="34"&gt;Burkina Faso&lt;/option&gt;&lt;option value="35"&gt;Burundi&lt;/option&gt;&lt;option value="36"&gt;Cambodia&lt;/option&gt;&lt;option value="37"&gt;Cameroon&lt;/option&gt;&lt;option value="38"&gt;Canada&lt;/option&gt;&lt;option value="39"&gt;Cape Verde&lt;/option&gt;&lt;option value="40"&gt;Cayman Islands&lt;/option&gt;&lt;option value="41"&gt;Central African Republic&lt;/option&gt;&lt;option value="42"&gt;Chad&lt;/option&gt;&lt;option value="43"&gt;Chile&lt;/option&gt;&lt;option value="44"&gt;China&lt;/option&gt;&lt;option value="45"&gt;Christmas Island&lt;/option&gt;&lt;option value="46"&gt;Cocos (Keeling) Islands&lt;/option&gt;&lt;option value="47"&gt;Colombia&lt;/option&gt;&lt;option value="48"&gt;Comoros&lt;/option&gt;&lt;option value="49"&gt;Congo&lt;/option&gt;&lt;option value="50"&gt;Congo The Democratic Republic Of The&lt;/option&gt;&lt;option value="51"&gt;Cook Islands&lt;/option&gt;&lt;option value="52"&gt;Costa Rica&lt;/option&gt;&lt;option value="53"&gt;Cote D'Ivoire (Ivory Coast)&lt;/option&gt;&lt;option value="54"&gt;Croatia (Hrvatska)&lt;/option&gt;&lt;option value="55"&gt;Cuba&lt;/option&gt;&lt;option value="56"&gt;Cyprus&lt;/option&gt;&lt;option value="57"&gt;Czech Republic&lt;/option&gt;&lt;option value="58"&gt;Denmark&lt;/option&gt;&lt;option value="59"&gt;Djibouti&lt;/option&gt;&lt;option value="60"&gt;Dominica&lt;/option&gt;&lt;option value="61"&gt;Dominican Republic&lt;/option&gt;&lt;option value="62"&gt;East Timor&lt;/option&gt;&lt;option value="63"&gt;Ecuador&lt;/option&gt;&lt;option value="64"&gt;Egypt&lt;/option&gt;&lt;option value="65"&gt;El Salvador&lt;/option&gt;&lt;option value="66"&gt;Equatorial Guinea&lt;/option&gt;&lt;option value="67"&gt;Eritrea&lt;/option&gt;&lt;option value="68"&gt;Estonia&lt;/option&gt;&lt;option value="69"&gt;Ethiopia&lt;/option&gt;&lt;option value="70"&gt;External Territories of Australia&lt;/option&gt;&lt;option value="71"&gt;Falkland Islands&lt;/option&gt;&lt;option value="72"&gt;Faroe Islands&lt;/option&gt;&lt;option value="73"&gt;Fiji Islands&lt;/option&gt;&lt;option value="74"&gt;Finland&lt;/option&gt;&lt;option value="75"&gt;France&lt;/option&gt;&lt;option value="76"&gt;French Guiana&lt;/option&gt;&lt;option value="77"&gt;French Polynesia&lt;/option&gt;&lt;option value="78"&gt;French Southern Territories&lt;/option&gt;&lt;option value="79"&gt;Gabon&lt;/option&gt;&lt;option value="80"&gt;Gambia The&lt;/option&gt;&lt;option value="81"&gt;Georgia&lt;/option&gt;&lt;option value="82"&gt;Germany&lt;/option&gt;&lt;option value="83"&gt;Ghana&lt;/option&gt;&lt;option value="84"&gt;Gibraltar&lt;/option&gt;&lt;option value="85"&gt;Greece&lt;/option&gt;&lt;option value="86"&gt;Greenland&lt;/option&gt;&lt;option value="87"&gt;Grenada&lt;/option&gt;&lt;option value="88"&gt;Guadeloupe&lt;/option&gt;&lt;option value="89"&gt;Guam&lt;/option&gt;&lt;option value="90"&gt;Guatemala&lt;/option&gt;&lt;option value="91"&gt;Guernsey and Alderney&lt;/option&gt;&lt;option value="92"&gt;Guinea&lt;/option&gt;&lt;option value="93"&gt;Guinea-Bissau&lt;/option&gt;&lt;option value="94"&gt;Guyana&lt;/option&gt;&lt;option value="95"&gt;Haiti&lt;/option&gt;&lt;option value="96"&gt;Heard and McDonald Islands&lt;/option&gt;&lt;option value="97"&gt;Honduras&lt;/option&gt;&lt;option value="98"&gt;Hong Kong S.A.R.&lt;/option&gt;&lt;option value="99"&gt;Hungary&lt;/option&gt;&lt;option value="100"&gt;Iceland&lt;/option&gt;&lt;option value="101"&gt;India&lt;/option&gt;&lt;option value="102"&gt;Indonesia&lt;/option&gt;&lt;option value="103"&gt;Iran&lt;/option&gt;&lt;option value="104"&gt;Iraq&lt;/option&gt;&lt;option value="105"&gt;Ireland&lt;/option&gt;&lt;option value="106"&gt;Israel&lt;/option&gt;&lt;option value="107"&gt;Italy&lt;/option&gt;&lt;option value="108"&gt;Jamaica&lt;/option&gt;&lt;option value="109"&gt;Japan&lt;/option&gt;&lt;option value="110"&gt;Jersey&lt;/option&gt;&lt;option value="111"&gt;Jordan&lt;/option&gt;&lt;option value="112"&gt;Kazakhstan&lt;/option&gt;&lt;option value="113"&gt;Kenya&lt;/option&gt;&lt;option value="114"&gt;Kiribati&lt;/option&gt;&lt;option value="115"&gt;Korea North&lt;/option&gt;&lt;option value="116"&gt;Korea South&lt;/option&gt;&lt;option value="117"&gt;Kuwait&lt;/option&gt;&lt;option value="118"&gt;Kyrgyzstan&lt;/option&gt;&lt;option value="119"&gt;Laos&lt;/option&gt;&lt;option value="120"&gt;Latvia&lt;/option&gt;&lt;option value="121"&gt;Lebanon&lt;/option&gt;&lt;option value="122"&gt;Lesotho&lt;/option&gt;&lt;option value="123"&gt;Liberia&lt;/option&gt;&lt;option value="124"&gt;Libya&lt;/option&gt;&lt;option value="125"&gt;Liechtenstein&lt;/option&gt;&lt;option value="126"&gt;Lithuania&lt;/option&gt;&lt;option value="127"&gt;Luxembourg&lt;/option&gt;&lt;option value="128"&gt;Macau S.A.R.&lt;/option&gt;&lt;option value="129"&gt;Macedonia&lt;/option&gt;&lt;option value="130"&gt;Madagascar&lt;/option&gt;&lt;option value="131"&gt;Malawi&lt;/option&gt;&lt;option value="132"&gt;Malaysia&lt;/option&gt;&lt;option value="133"&gt;Maldives&lt;/option&gt;&lt;option value="134"&gt;Mali&lt;/option&gt;&lt;option value="135"&gt;Malta&lt;/option&gt;&lt;option value="136"&gt;Man (Isle of)&lt;/option&gt;&lt;option value="137"&gt;Marshall Islands&lt;/option&gt;&lt;option value="138"&gt;Martinique&lt;/option&gt;&lt;option value="139"&gt;Mauritania&lt;/option&gt;&lt;option value="140"&gt;Mauritius&lt;/option&gt;&lt;option value="141"&gt;Mayotte&lt;/option&gt;&lt;option value="142"&gt;Mexico&lt;/option&gt;&lt;option value="143"&gt;Micronesia&lt;/option&gt;&lt;option value="144"&gt;Moldova&lt;/option&gt;&lt;option value="145"&gt;Monaco&lt;/option&gt;&lt;option value="146"&gt;Mongolia&lt;/option&gt;&lt;option value="147"&gt;Montserrat&lt;/option&gt;&lt;option value="148"&gt;Morocco&lt;/option&gt;&lt;option value="149"&gt;Mozambique&lt;/option&gt;&lt;option value="150"&gt;Myanmar&lt;/option&gt;&lt;option value="151"&gt;Namibia&lt;/option&gt;&lt;option value="152"&gt;Nauru&lt;/option&gt;&lt;option value="153"&gt;Nepal&lt;/option&gt;&lt;option value="154"&gt;Netherlands Antilles&lt;/option&gt;&lt;option value="155"&gt;Netherlands The&lt;/option&gt;&lt;option value="156"&gt;New Caledonia&lt;/option&gt;&lt;option value="157"&gt;New Zealand&lt;/option&gt;&lt;option value="158"&gt;Nicaragua&lt;/option&gt;&lt;option value="159"&gt;Niger&lt;/option&gt;&lt;option value="160"&gt;Nigeria&lt;/option&gt;&lt;option value="161"&gt;Niue&lt;/option&gt;&lt;option value="162"&gt;Norfolk Island&lt;/option&gt;&lt;option value="163"&gt;Northern Mariana Islands&lt;/option&gt;&lt;option value="164"&gt;Norway&lt;/option&gt;&lt;option value="165"&gt;Oman&lt;/option&gt;&lt;option value="166"&gt;Pakistan&lt;/option&gt;&lt;option value="167"&gt;Palau&lt;/option&gt;&lt;option value="168"&gt;Palestinian Territory Occupied&lt;/option&gt;&lt;option value="169"&gt;Panama&lt;/option&gt;&lt;option value="170"&gt;Papua new Guinea&lt;/option&gt;&lt;option value="171"&gt;Paraguay&lt;/option&gt;&lt;option value="172"&gt;Peru&lt;/option&gt;&lt;option value="173"&gt;Philippines&lt;/option&gt;&lt;option value="174"&gt;Pitcairn Island&lt;/option&gt;&lt;option value="175"&gt;Poland&lt;/option&gt;&lt;option value="176"&gt;Portugal&lt;/option&gt;&lt;option value="177"&gt;Puerto Rico&lt;/option&gt;&lt;option value="178"&gt;Qatar&lt;/option&gt;&lt;option value="179"&gt;Reunion&lt;/option&gt;&lt;option value="180"&gt;Romania&lt;/option&gt;&lt;option value="181"&gt;Russia&lt;/option&gt;&lt;option value="182"&gt;Rwanda&lt;/option&gt;&lt;option value="183"&gt;Saint Helena&lt;/option&gt;&lt;option value="184"&gt;Saint Kitts And Nevis&lt;/option&gt;&lt;option value="185"&gt;Saint Lucia&lt;/option&gt;&lt;option value="186"&gt;Saint Pierre and Miquelon&lt;/option&gt;&lt;option value="187"&gt;Saint Vincent And The Grenadines&lt;/option&gt;&lt;option value="188"&gt;Samoa&lt;/option&gt;&lt;option value="189"&gt;San Marino&lt;/option&gt;&lt;option value="190"&gt;Sao Tome and Principe&lt;/option&gt;&lt;option value="191"&gt;Saudi Arabia&lt;/option&gt;&lt;option value="192"&gt;Senegal&lt;/option&gt;&lt;option value="193"&gt;Serbia&lt;/option&gt;&lt;option value="194"&gt;Seychelles&lt;/option&gt;&lt;option value="195"&gt;Sierra Leone&lt;/option&gt;&lt;option value="196"&gt;Singapore&lt;/option&gt;&lt;option value="197"&gt;Slovakia&lt;/option&gt;&lt;option value="198"&gt;Slovenia&lt;/option&gt;&lt;option value="199"&gt;Smaller Territories of the UK&lt;/option&gt;&lt;option value="200"&gt;Solomon Islands&lt;/option&gt;&lt;option value="201"&gt;Somalia&lt;/option&gt;&lt;option value="202"&gt;South Africa&lt;/option&gt;&lt;option value="203"&gt;South Georgia&lt;/option&gt;&lt;option value="204"&gt;South Sudan&lt;/option&gt;&lt;option value="205"&gt;Spain&lt;/option&gt;&lt;option value="206"&gt;Sri Lanka&lt;/option&gt;&lt;option value="207"&gt;Sudan&lt;/option&gt;&lt;option value="208"&gt;Suriname&lt;/option&gt;&lt;option value="209"&gt;Svalbard And Jan Mayen Islands&lt;/option&gt;&lt;option value="210"&gt;Swaziland&lt;/option&gt;&lt;option value="211"&gt;Sweden&lt;/option&gt;&lt;option value="212"&gt;Switzerland&lt;/option&gt;&lt;option value="213"&gt;Syria&lt;/option&gt;&lt;option value="214"&gt;Taiwan&lt;/option&gt;&lt;option value="215"&gt;Tajikistan&lt;/option&gt;&lt;option value="216"&gt;Tanzania&lt;/option&gt;&lt;option value="217"&gt;Thailand&lt;/option&gt;&lt;option value="218"&gt;Togo&lt;/option&gt;&lt;option value="219"&gt;Tokelau&lt;/option&gt;&lt;option value="220"&gt;Tonga&lt;/option&gt;&lt;option value="221"&gt;Trinidad And Tobago&lt;/option&gt;&lt;option value="222"&gt;Tunisia&lt;/option&gt;&lt;option value="223"&gt;Turkey&lt;/option&gt;&lt;option value="224"&gt;Turkmenistan&lt;/option&gt;&lt;option value="225"&gt;Turks And Caicos Islands&lt;/option&gt;&lt;option value="226"&gt;Tuvalu&lt;/option&gt;&lt;option value="227"&gt;Uganda&lt;/option&gt;&lt;option value="228"&gt;Ukraine&lt;/option&gt;&lt;option value="229"&gt;United Arab Emirates&lt;/option&gt;&lt;option value="230"&gt;United Kingdom&lt;/option&gt;&lt;option value="231"&gt;United States&lt;/option&gt;&lt;option value="232"&gt;United States Minor Outlying Islands&lt;/option&gt;&lt;option value="233"&gt;Uruguay&lt;/option&gt;&lt;option value="234"&gt;Uzbekistan&lt;/option&gt;&lt;option value="235"&gt;Vanuatu&lt;/option&gt;&lt;option value="236"&gt;Vatican City State (Holy See)&lt;/option&gt;&lt;option value="237"&gt;Venezuela&lt;/option&gt;&lt;option value="238"&gt;Vietnam&lt;/option&gt;&lt;option value="239"&gt;Virgin Islands (British)&lt;/option&gt;&lt;option value="240"&gt;Virgin Islands (US)&lt;/option&gt;&lt;option value="241"&gt;Wallis And Futuna Islands&lt;/option&gt;&lt;option value="242"&gt;Western Sahara&lt;/option&gt;&lt;option value="243"&gt;Yemen&lt;/option&gt;&lt;option value="244"&gt;Yugoslavia&lt;/option&gt;&lt;option value="245"&gt;Zambia&lt;/option&gt;&lt;option value="246"&gt;Zimbabwe&lt;/option&gt;&lt;/select&gt;
+&lt;select name="state" class="states" id="stateId"&gt;
+     &lt;option value=""&gt;Select State&lt;/option&gt;
+&lt;/select&gt;
+&lt;select name="city" class="last cities" id="cityId"&gt;
+   &lt;option value=""&gt;Select City&lt;/option&gt;
+&lt;/select&gt;
+
+ &lt;span class="tabaddon"&gt;&lt;i class="fa fa-map fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;input type="text" placeholder="Zip code" name="zip"&gt;     
+                
+                &lt;div class="btn"&gt;
+                  &lt;input type="checkbox" name="terms" required=""&gt;
+                  &lt;em&gt;I agree with terms and conditions &lt;a href="#" style=" color:#fff;font-size: 21px;" class="displayPopup"&gt;Read Detail&lt;/a&gt; &lt;/em&gt;
+                  &lt;input type="submit" value="Sign up"&gt;
+                &lt;/div&gt;
+              &lt;/form&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+      	  &lt;li&gt;
+            &lt;input type="radio" name="tabs blue" id="tab2"&gt;
+            &lt;label for="tab2"&gt;Login&lt;/label&gt;
+            &lt;div id="tab-content2" class="tab-content"&gt;
+              &lt;form method="post" name="register" action=""&gt;
+               &lt;input name="_hidCheckSubmit" type="hidden" value="2"&gt;
+                &lt;span class="tabaddon"&gt;&lt;i class="fa fa-envelope fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;input class="field" name="_txtUserName" required="" type="text" placeholder="Username" value=""&gt;
+                &lt;span class="tabaddon"&gt;&lt;i class="fa fa-lock fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;input class="field" name="_txtPassword" required="" type="password" placeholder="mypassword" value=""&gt;
+                &lt;div class="btn"&gt;
+                  &lt;input type="checkbox" name="terms"&gt;
+                  &lt;em&gt;Keep me logged in &lt;/em&gt;
+                  &lt;input type="submit" value="Login"&gt;
+                &lt;/div&gt;
+              &lt;/form&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          	
+          
+          
+          
+          
+        
+	&lt;/ul&gt;
+	&lt;/section&gt;
+    
+  &lt;div class="right"&gt;
+    &lt;a href="https://www.facebook.com/groups/1319017341783803" target="_blank"&gt;
+  &lt;img src="banner/64625f639e96b.png"&gt;
+    &lt;/a&gt;&lt;a href="" target="_blank"&gt;
+  &lt;img src="banner/5c33a332785bb.jpg"&gt;
+    &lt;/a&gt;&lt;a href="https://api.whatsapp.com/send?phone=918743913121&amp;amp;text=Hello,%20i%20am%20interested%20to%20purchase%20video%20course" target="_blank"&gt;
+  &lt;img src="banner/5e13707d13fe4.jpg"&gt;
+    &lt;/a&gt;&lt;a href="https://www.google.com/search?client=firefox-b-ab&amp;amp;q=testing+world#lrd=0x390ce45bd130c3e3:0x2cbebc3a19808103,1,,," target="_blank"&gt;
+  &lt;img src="banner/5c33a68c8a29f.jpg"&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+    
+    
+&lt;/div&gt;
+
+  &lt;footer&gt;
+	&lt;p&gt;Login &amp;amp; Sign Up &lt;/p&gt;
+
+&lt;/footer&gt; 
+
+&lt;style&gt;
+select[disabled]{
+  color:#aaa;
+}
+&lt;/style&gt;
+
+
+
+
+
+ &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.12.4.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  &lt;/script&gt;
+  
+  
+  &lt;script src="js/location.js"&gt;&lt;/script&gt;  
+  
+  
+  &lt;script&gt;
+  $(function() { //document ready
+    $(".displayPopup").on("click", function() { //click event of the button
+        $("#overlay").fadeTo(100, .3); //this will show the overlay awith a crossbrowser transparency
+        $("#popup1").show(); // show popup1
+        return false; //disable event propogation (avoid addition of "#" to url)
+    })
+ 
+    $(".popup .close").on("click", function() { //click event of the close button in popup
+        $("#overlay").hide(); //hide overlay
+        $(".popup").hide(); //hide popup
+        return false; //disable event propogation (avoid addition of "#" to url)
+    })
+})
+  &lt;/script&gt;
+  
+
+
+
+
+&lt;div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<arg>${PageHTML}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:42.020003" elapsed="0.000998"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:42.048017" level="INFO">${Attr} = field</msg>
+<var>${Attr}</var>
+<arg>name:fld_username</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:42.022996" elapsed="0.025021"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:42.049924" level="INFO">field</msg>
+<arg>${Attr}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:42.049924" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:42.061890" level="INFO">${cnt} = 6</msg>
+<var>${cnt}</var>
+<arg>class:field</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:42.050919" elapsed="0.010971"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:42.062887" level="INFO">6</msg>
+<arg>${cnt}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:42.062887" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-25T19:33:42.066881" elapsed="2.152068"/>
+</kw>
+<status status="PASS" start="2024-01-25T19:33:37.409256" elapsed="6.809693"/>
+</test>
+<doc>This File having testcase of testing ABC Functionality</doc>
+<status status="PASS" start="2024-01-25T19:33:24.256936" elapsed="19.964007"/>
+</suite>
+<suite id="s1-s3" name="TC 005 UserDefinedKeywords usingPythonScripting" source="C:\information\TestingWorld\RobotAutomation\TestCases\RegistrationTC\TC_005_UserDefinedKeywords_usingPythonScripting.robot">
+<test id="s1-s3-t1" name="User defined keywords using Python" line="15">
+<kw name="Concatenate Username Password" owner="Resources2">
+<kw name="Concatenate Two Values" owner="UserKeywords">
+<msg time="2024-01-25T19:33:44.550882" level="INFO">${result} = Testing World</msg>
+<var>${result}</var>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-25T19:33:44.550882" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:44.551879" level="INFO">Testing World</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:44.551879" elapsed="0.000000"/>
+</kw>
+<arg>Testing</arg>
+<arg>World</arg>
+<status status="PASS" start="2024-01-25T19:33:44.550882" elapsed="0.001995"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:44.552877" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<arg>${url_testing}</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-25T19:33:44.552877" elapsed="4.084762"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-25T19:33:48.638635" elapsed="0.118296"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-25T19:33:48.756931" elapsed="2.115138"/>
+</kw>
+<status status="PASS" start="2024-01-25T19:33:44.549885" elapsed="6.322184"/>
+</test>
+<doc>This File having testcase of testing ABC Functionality</doc>
+<status status="PASS" start="2024-01-25T19:33:44.225930" elapsed="6.650124"/>
+</suite>
+<suite id="s1-s4" name="TC 006 ReadElementLocators fromJSONfile" source="C:\information\TestingWorld\RobotAutomation\TestCases\RegistrationTC\TC_006_ReadElementLocators_fromJSONfile.robot">
+<test id="s1-s4-t1" name="Read Element Locators from JSON file" line="11">
+<kw name="Start Browser and Maximize" owner="Resources2">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:50.888031" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-25T19:33:50.888031" elapsed="3.777832"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-25T19:33:54.668117" elapsed="0.115641"/>
+</kw>
+<doc>User defined Keyword without Argument</doc>
+<status status="PASS" start="2024-01-25T19:33:50.887074" elapsed="3.897682"/>
+</kw>
+<kw name="Read Element Locators" owner="Resources2">
+<kw name="Read Locator From Json" owner="Locators">
+<msg time="2024-01-25T19:33:54.785752" level="INFO">${result} = fld_username</msg>
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<status status="PASS" start="2024-01-25T19:33:54.784756" elapsed="0.000996"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2024-01-25T19:33:54.786750" elapsed="0.000571"/>
+</return>
+<msg time="2024-01-25T19:33:54.787331" level="INFO">${username} = fld_username</msg>
+<var>${username}</var>
+<arg>Registration.username_textbox_name</arg>
+<status status="PASS" start="2024-01-25T19:33:54.784756" elapsed="0.002575"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:54.789324" level="INFO">Typing text 'Hello World' into text field 'name:fld_username'.</msg>
+<arg>name:${username}</arg>
+<arg>Hello World</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:54.788426" elapsed="0.082439"/>
+</kw>
+<kw name="Read Element Locators" owner="Resources2">
+<kw name="Read Locator From Json" owner="Locators">
+<msg time="2024-01-25T19:33:54.872859" level="INFO">${result} = fld_email</msg>
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<status status="PASS" start="2024-01-25T19:33:54.871862" elapsed="0.000997"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2024-01-25T19:33:54.872859" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:33:54.873857" level="INFO">${email} = fld_email</msg>
+<var>${email}</var>
+<arg>Registration.email_textbox_name</arg>
+<status status="PASS" start="2024-01-25T19:33:54.871862" elapsed="0.001995"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:54.873857" level="INFO">Typing text 'testingworldindia@gmail.com' into text field 'name:fld_email'.</msg>
+<arg>name:${email}</arg>
+<arg>testingworldindia@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:54.873857" elapsed="0.053098"/>
+</kw>
+<kw name="Read Element Locators" owner="Resources2">
+<kw name="Read Locator From Json" owner="Locators">
+<msg time="2024-01-25T19:33:54.927954" level="INFO">${result} = fld_password</msg>
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<status status="PASS" start="2024-01-25T19:33:54.927954" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2024-01-25T19:33:54.927954" elapsed="0.000993"/>
+</return>
+<msg time="2024-01-25T19:33:54.928947" level="INFO">${password} = fld_password</msg>
+<var>${password}</var>
+<arg>Registration.password_textbox_name</arg>
+<status status="PASS" start="2024-01-25T19:33:54.926955" elapsed="0.001992"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:54.928947" level="INFO">Typing text '123456' into text field 'name:fld_password'.</msg>
+<arg>name:${password}</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:33:54.928947" elapsed="0.044979"/>
+</kw>
+<kw name="Close Browser Window" owner="Resources2">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:54.977738" level="INFO">${Title} = Login &amp; Sign Up Forms</msg>
+<var>${Title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-01-25T19:33:54.974923" elapsed="0.002815"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:33:54.978734" level="INFO">Login &amp; Sign Up Forms</msg>
+<arg>${Title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:33:54.978734" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-25T19:33:54.979733" elapsed="2.107217"/>
+</kw>
+<status status="PASS" start="2024-01-25T19:33:54.974923" elapsed="2.113025"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-01-25T19:33:50.887074" elapsed="6.200874"/>
+</test>
+<status status="PASS" start="2024-01-25T19:33:50.878056" elapsed="6.211885"/>
+</suite>
+<suite id="s1-s5" name="TC 007 WriteTestCases inBDDformat" source="C:\information\TestingWorld\RobotAutomation\TestCases\RegistrationTC\TC_007_WriteTestCases_inBDDformat.robot">
+<test id="s1-s5-t1" name="Write Test Cases in BDD format" line="12">
+<kw name="Given Start Browser and Maximize" owner="Resources2">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:33:57.100912" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-25T19:33:57.100912" elapsed="4.285330"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-25T19:34:01.386933" elapsed="0.127949"/>
+</kw>
+<doc>User defined Keyword without Argument</doc>
+<status status="PASS" start="2024-01-25T19:33:57.100912" elapsed="4.413970"/>
+</kw>
+<kw name="When Create Folder at Runtime" owner="Resources2">
+<kw name="Create Folder" owner="UserKeywords">
+<msg time="2024-01-25T19:34:01.515879" level="FAIL">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:\\information\\TestingWorldABCD'</msg>
+<arg>${flodername}</arg>
+<status status="FAIL" start="2024-01-25T19:34:01.515879" elapsed="0.000998">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:\\information\\TestingWorldABCD'</status>
+</kw>
+<kw name="Create Sub Folder" owner="UserKeywords">
+<arg>${subflodername}</arg>
+<status status="NOT RUN" start="2024-01-25T19:34:01.517979" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>"Task Done Successfully"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-01-25T19:34:01.518970" elapsed="0.000000"/>
+</kw>
+<arg>ABCD</arg>
+<arg>XYZM</arg>
+<status status="FAIL" start="2024-01-25T19:34:01.515879" elapsed="0.003091">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:\\information\\TestingWorldABCD'</status>
+</kw>
+<kw name="Then Concatenate Username Password" owner="Resources2">
+<arg>Testing</arg>
+<arg>World</arg>
+<status status="NOT RUN" start="2024-01-25T19:34:01.518970" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser Window" owner="Resources2">
+<status status="NOT RUN" start="2024-01-25T19:34:01.518970" elapsed="0.000997"/>
+</kw>
+<status status="FAIL" start="2024-01-25T19:33:57.099916" elapsed="4.420051">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:\\information\\TestingWorldABCD'</status>
+</test>
+<status status="FAIL" start="2024-01-25T19:33:57.091939" elapsed="4.430023"/>
+</suite>
+<suite id="s1-s6" name="TC 009 ReadData fromExcel" source="C:\information\TestingWorld\RobotAutomation\TestCases\RegistrationTC\TC_009_ReadData_fromExcel.robot">
+<test id="s1-s6-t1" name="Read Data From Excel" line="12">
+<kw name="Start Browser and Maximize" owner="Resources2">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:01.532933" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-25T19:34:01.532933" elapsed="12.313059"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-25T19:34:13.847679" elapsed="0.116866"/>
+</kw>
+<doc>User defined Keyword without Argument</doc>
+<status status="PASS" start="2024-01-25T19:34:01.531936" elapsed="12.432609"/>
+</kw>
+<kw name="Read Number of Rows" owner="Resources2">
+<kw name="Fetch Number Of Rows" owner="ReadData">
+<msg time="2024-01-25T19:34:13.966542" level="INFO">${max_row} = 4</msg>
+<var>${max_row}</var>
+<arg>${sheetname}</arg>
+<status status="PASS" start="2024-01-25T19:34:13.965544" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${max_row}</value>
+<status status="PASS" start="2024-01-25T19:34:13.967536" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:13.968535" level="INFO">${max_row} = 4</msg>
+<var>${max_row}</var>
+<arg>Hello</arg>
+<status status="PASS" start="2024-01-25T19:34:13.965544" elapsed="0.002991"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:13.970664" level="INFO">${cell_data} = Username1</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:13.969667" elapsed="0.000997"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:13.970664" elapsed="0.001000"/>
+</return>
+<msg time="2024-01-25T19:34:13.971664" level="INFO">${username} = Username1</msg>
+<var>${username}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-01-25T19:34:13.969667" elapsed="0.001997"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:13.974656" level="INFO">${cell_data} = Password1</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:13.974656" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:13.975651" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:13.976649" level="INFO">${password} = Password1</msg>
+<var>${password}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-01-25T19:34:13.973656" elapsed="0.002993"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:13.977645" level="INFO">${cell_data} = Hello1@gmail.com</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:13.977645" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:13.979640" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:13.979640" level="INFO">${email} = Hello1@gmail.com</msg>
+<var>${email}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-01-25T19:34:13.977645" elapsed="0.001995"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:13.983631" level="INFO">Typing text 'Username1' into text field 'name:fld_username'.</msg>
+<arg>name:fld_username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:13.982633" elapsed="0.108314"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:14.092941" level="INFO">Typing text 'Hello1@gmail.com' into text field 'name:fld_email'.</msg>
+<arg>name:fld_email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:14.091944" elapsed="0.060756"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:14.154693" level="INFO">Typing text 'Password1' into text field 'name:fld_password'.</msg>
+<arg>name:fld_password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:14.153696" elapsed="0.049425"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-25T19:34:17.204197" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-25T19:34:14.204117" elapsed="3.000080"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-01-25T19:34:13.969667" elapsed="3.235523"/>
+</iter>
+<iter>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:17.206188" level="INFO">${cell_data} = Username2</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:17.205190" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:17.206188" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:17.207238" level="INFO">${username} = Username2</msg>
+<var>${username}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-01-25T19:34:17.205190" elapsed="0.002048"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:17.208233" level="INFO">${cell_data} = Password2</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:17.208233" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:17.209231" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:17.209231" level="INFO">${password} = Password2</msg>
+<var>${password}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-01-25T19:34:17.207238" elapsed="0.001993"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:17.210228" level="INFO">${cell_data} = Hello2@gmail.com</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:17.210228" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:17.211225" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:17.211225" level="INFO">${email} = Hello2@gmail.com</msg>
+<var>${email}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-01-25T19:34:17.210228" elapsed="0.000997"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:17.212221" level="INFO">Typing text 'Username2' into text field 'name:fld_username'.</msg>
+<arg>name:fld_username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:17.212221" elapsed="0.048645"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:17.261863" level="INFO">Typing text 'Hello2@gmail.com' into text field 'name:fld_email'.</msg>
+<arg>name:fld_email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:17.261863" elapsed="0.046441"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:17.309291" level="INFO">Typing text 'Password2' into text field 'name:fld_password'.</msg>
+<arg>name:fld_password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:17.309291" elapsed="0.049645"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-25T19:34:20.360014" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-25T19:34:17.359928" elapsed="3.000086"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-01-25T19:34:17.205190" elapsed="3.154824"/>
+</iter>
+<iter>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:20.362014" level="INFO">${cell_data} = Username3</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:20.361016" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:20.364013" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:20.364013" level="INFO">${username} = Username3</msg>
+<var>${username}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-01-25T19:34:20.361016" elapsed="0.002997"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:20.366003" level="INFO">${cell_data} = Password3</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:20.365005" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:20.366003" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:20.366752" level="INFO">${password} = Password3</msg>
+<var>${password}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-01-25T19:34:20.365005" elapsed="0.001747"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:20.367746" level="INFO">${cell_data} = Hello3@gmail.com</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:20.367657" elapsed="0.000089"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:20.368744" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:20.368744" level="INFO">${email} = Hello3@gmail.com</msg>
+<var>${email}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-01-25T19:34:20.366752" elapsed="0.001992"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:20.369740" level="INFO">Typing text 'Username3' into text field 'name:fld_username'.</msg>
+<arg>name:fld_username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:20.369740" elapsed="0.055906"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:20.426643" level="INFO">Typing text 'Hello3@gmail.com' into text field 'name:fld_email'.</msg>
+<arg>name:fld_email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:20.426643" elapsed="0.051257"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:20.478890" level="INFO">Typing text 'Password3' into text field 'name:fld_password'.</msg>
+<arg>name:fld_password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:20.477900" elapsed="0.051958"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-25T19:34:23.533241" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-25T19:34:20.532850" elapsed="3.000391"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-01-25T19:34:20.361016" elapsed="3.172865"/>
+</iter>
+<iter>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:23.534884" level="INFO">${cell_data} = Username4</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:23.534884" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:23.535880" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:23.535880" level="INFO">${username} = Username4</msg>
+<var>${username}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-01-25T19:34:23.533881" elapsed="0.001999"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:23.537784" level="INFO">${cell_data} = Password4</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:23.536876" elapsed="0.000908"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:23.537784" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:23.537784" level="INFO">${password} = Password4</msg>
+<var>${password}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-01-25T19:34:23.536876" elapsed="0.000908"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="Resources2">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-01-25T19:34:23.539774" level="INFO">${cell_data} = Hello4@gmail.com</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-01-25T19:34:23.538777" elapsed="0.000997"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-01-25T19:34:23.540360" elapsed="0.000000"/>
+</return>
+<msg time="2024-01-25T19:34:23.540360" level="INFO">${email} = Hello4@gmail.com</msg>
+<var>${email}</var>
+<arg>Hello</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-01-25T19:34:23.538777" elapsed="0.001583"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:23.541359" level="INFO">Typing text 'Username4' into text field 'name:fld_username'.</msg>
+<arg>name:fld_username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:23.541359" elapsed="0.065242"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:23.608596" level="INFO">Typing text 'Hello4@gmail.com' into text field 'name:fld_email'.</msg>
+<arg>name:fld_email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:23.608596" elapsed="0.093782"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:23.704361" level="INFO">Typing text 'Password4' into text field 'name:fld_password'.</msg>
+<arg>name:fld_password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T19:34:23.703364" elapsed="0.108338"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-25T19:34:26.814875" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-25T19:34:23.813697" elapsed="3.001178"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-01-25T19:34:23.533881" elapsed="3.280994"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>${max_row}+1</value>
+<status status="PASS" start="2024-01-25T19:34:13.968675" elapsed="12.846200"/>
+</for>
+<kw name="Close Browser Window" owner="Resources2">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-01-25T19:34:26.819978" level="INFO">${Title} = Login &amp; Sign Up Forms</msg>
+<var>${Title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-01-25T19:34:26.816077" elapsed="0.003901"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-25T19:34:26.820976" level="INFO">Login &amp; Sign Up Forms</msg>
+<arg>${Title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-25T19:34:26.820976" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-25T19:34:26.823967" elapsed="2.102822"/>
+</kw>
+<status status="PASS" start="2024-01-25T19:34:26.816077" elapsed="2.111710"/>
+</kw>
+<status status="PASS" start="2024-01-25T19:34:01.531936" elapsed="27.396844"/>
+</test>
+<status status="PASS" start="2024-01-25T19:34:01.523957" elapsed="27.412801"/>
+</suite>
+<status status="FAIL" start="2024-01-25T19:33:11.322650" elapsed="77.623277"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+<stat pass="1" fail="0" skip="0">Sanity</stat>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="8" fail="1" skip="0" id="s1" name="RegistrationTC">RegistrationTC</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="TC 003 Start Close Browser">RegistrationTC.TC 003 Start Close Browser</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="TC 004 FetchData">RegistrationTC.TC 004 FetchData</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="TC 005 UserDefinedKeywords usingPythonScripting">RegistrationTC.TC 005 UserDefinedKeywords usingPythonScripting</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="TC 006 ReadElementLocators fromJSONfile">RegistrationTC.TC 006 ReadElementLocators fromJSONfile</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s5" name="TC 007 WriteTestCases inBDDformat">RegistrationTC.TC 007 WriteTestCases inBDDformat</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s6" name="TC 009 ReadData fromExcel">RegistrationTC.TC 009 ReadData fromExcel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
